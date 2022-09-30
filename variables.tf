@@ -1,5 +1,5 @@
-# Copyright 2022 SAS Adaltas
-# SPDX-License-Identifier: Apache-2.0
+# Copyright 2022 Adaltas
+# SPDX-License-Identifier: MIT
 
 variable "lxd_storage_pool" {
   type    = string

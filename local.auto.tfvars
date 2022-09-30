@@ -1,5 +1,5 @@
-# Copyright 2022 SAS Adaltas
-# SPDX-License-Identifier: Apache-2.0
+# Copyright 2022 Adaltas
+# SPDX-License-Identifier: MIT
 
 tdp_network = {
   ipv4 = { address = "192.168.57.1/24" }
@@ -31,6 +31,7 @@ tdp_profiles = [
   }
 ]
 
+# tdp_image = "images:rockylinux/8"
 tdp_image = "images:centos/7"
 
 tdp_containers = [

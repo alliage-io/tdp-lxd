@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Copyright 2022 SAS Adaltas
-# SPDX-License-Identifier: Apache-2.0
+# Copyright 2022 Adaltas
+# SPDX-License-Identifier: MIT
 
 # Start|stop|restart LXD containers handled by terraform
 # $1 = Action to execute

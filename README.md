@@ -8,6 +8,7 @@ This is an alternative to [tdp-vagrant](https://github.com/TOSIT-IO/tdp-vagrant)
 
 - LXD (to operate Linux containers)
 - Terraform >= 0.13 (to automatize containers lifecycle managment)
+- Ansible >= 2.9.6 (to provision the containers)
 
 Install the Terraform modules with `terraform init`.
 
