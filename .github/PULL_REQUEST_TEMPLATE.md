@@ -24,4 +24,4 @@ To make clear that you license your contribution under the [Apache License Versi
 
 - [ ] I hereby declare this contribution to be licenced under the [Apache License Version 2.0, January 2004](http://www.apache.org/licenses/LICENSE-2.0)
 
-- [ ] I hereby agree to grant [SAS Adaltas](https://www.adaltas.io/) a copyright license to use my contributions.
+- [ ] I hereby agree to grant [Adaltas](https://www.adaltas.com) a copyright license to use my contributions.

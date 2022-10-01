@@ -8,10 +8,10 @@
 # $2 = Container group name
 
 print_usage() {
-  echo "Usage: lxd-containers.sh [start|stop|restart] CONTAINER_GROUP"
+  echo "Usage: lxd-containers.sh [start|stop|restart]"
 }
 
-if [ "$#" -eq 2 ]; then
+if [ "$#" -eq 1 ]; then
   case "$1" in
   start)
     invalid_status=Running
@@ -30,7 +30,11 @@ if [ "$#" -eq 2 ]; then
     ;;
   esac
 
-  containers_list=$(terraform output -json "$2_containers" | jq -r '.[]')
+  # cd to tdp-lxd root dir
+  parent_dir=$(realpath "$(dirname "$0")")
+  cd "$parent_dir/.." || exit 1
+
+  containers_list=$(terraform output -json "tdp_containers" | jq -r '.[]')
 
   for c in $containers_list; do
     status=$(lxc query "/1.0/containers/$c" | jq -r '.status')

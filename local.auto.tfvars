@@ -11,28 +11,27 @@ tdp_profiles = [
   {
     name = "tdp_master"
     limits = {
-      cpu    = 3
-      memory = "3GB"
+      cpu    = 4
+      memory = "4GB"
     }
   },
   {
     name = "tdp_worker"
     limits = {
-      cpu    = 2
-      memory = "2GB"
+      cpu    = 3
+      memory = "3GB"
     }
   },
   {
     name = "tdp_edge"
     limits = {
-      cpu    = 2
-      memory = "2GB"
+      cpu    = 1
+      memory = "1GB"
     }
   }
 ]
 
-# tdp_image = "images:rockylinux/8"
-tdp_image = "images:centos/7"
+tdp_image = "images:rockylinux/8"
 
 tdp_containers = [
   {

@@ -16,6 +16,10 @@ resource "lxd_network" "tdp_network" {
 resource "lxd_profile" "tdp_node" {
   name = "tdp_node"
 
+  config = {
+    "boot.autostart" = false
+  }
+
   device {
     type = "disk"
     name = "root"
