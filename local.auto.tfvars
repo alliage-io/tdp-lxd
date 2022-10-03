@@ -12,21 +12,28 @@ tdp_profiles = [
     name = "tdp_master"
     limits = {
       cpu    = 4
-      memory = "4GB"
+      memory = "4GiB"
+    }
+  },
+  {
+    name = "tdp_master3"
+    limits = {
+      cpu    = 5
+      memory = "5GiB"
     }
   },
   {
     name = "tdp_worker"
     limits = {
       cpu    = 3
-      memory = "3GB"
+      memory = "3GiB"
     }
   },
   {
     name = "tdp_edge"
     limits = {
       cpu    = 1
-      memory = "1GB"
+      memory = "1GiB"
     }
   }
 ]
@@ -54,7 +61,7 @@ tdp_containers = [
   },
   {
     name    = "master-03"
-    profile = "tdp_master"
+    profile = "tdp_master3"
     ip      = "192.168.57.13"
     ansible_groups = [
       "master",
@@ -87,7 +94,7 @@ tdp_containers = [
   },
   {
     name    = "edge-01"
-    profile = "tdp_worker"
+    profile = "tdp_edge"
     ip      = "192.168.57.10"
     ansible_groups = [
       "edge"
