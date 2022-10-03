@@ -1,0 +1,13 @@
+%{ for container in tdp_containers ~}
+${ container.name } ansible_connection=lxd ip=${ container.ip } domain=${ tdp_domain }
+%{ endfor ~}
+
+%{ for group in distinct(flatten(tdp_containers.*.ansible_groups)) ~}
+[${ group }]
+%{ for container in tdp_containers ~}
+%{ if contains(container.ansible_groups, group) ~}
+${ container.name }
+%{ endif ~}
+%{ endfor ~}
+
+%{ endfor ~}
